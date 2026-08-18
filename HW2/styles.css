@@ -1,0 +1,252 @@
+/* ============================================
+   Eva Kos-Sivirin — QC Engineer Portfolio
+   Palette: steel blue + QA "pass" teal
+   Type: Space Grotesk (display) / IBM Plex Sans (body) / IBM Plex Mono (labels)
+   ============================================ */
+
+:root {
+    --bg: #F6F8FA;
+    --surface: #FFFFFF;
+    --text: #1E2A38;
+    --text-muted: #5C6B7A;
+    --primary: #2C5F8A;
+    --primary-dark: #16324A;
+    --accent: #2E9E83;
+    --border: #DCE3EA;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', Verdana, sans-serif;
+    color: var(--primary-dark);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--primary);
+    transition: color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--accent);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ---- Nav ---- */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    z-index: 100;
+    background-color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 14px 10px;
+    position: relative;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #FFFFFF;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 8px;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+main {
+    padding-top: 70px;
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    scroll-margin-top: 80px;
+}
+
+li {
+    margin-left: 20px;
+    padding: 3px 0;
+}
+
+/* checkmark bullets on the lists that read as accomplishments/traits */
+#skills li,
+#qa-mindset li,
+#personal li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+#skills li::before,
+#qa-mindset li::before,
+#personal li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ---- Hero ---- */
+
+#hero {
+    margin-top: 0;
+    padding: 20px 15px;
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-position: top right;
+    border-radius: 8px;
+}
+
+#hero h1 {
+    margin-top: 30px;
+}
+
+#hero p:first-of-type {
+    margin-bottom: 10px;
+}
+
+#hero img {
+    float: left;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--surface);
+    box-shadow: 0 2px 10px rgba(22, 50, 74, 0.18);
+}
+
+/* ---- Contact ---- */
+
+address {
+    font-style: normal;
+}
+
+/* ---- Footer ---- */
+
+footer {
+    background-color: var(--primary-dark);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 16px;
+    margin-top: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 600px) {
+    body {
+        width: 92%;
+    }
+
+    nav {
+        width: 92%;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        padding: 10px 6px;
+    }
+
+    #hero img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    #hero {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
