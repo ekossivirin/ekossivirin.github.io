@@ -142,6 +142,7 @@ main {
     flex-grow: 1;
     padding-top: 70px;
     gap: 12px;
+    padding-bottom: 30px;
 }
 
 .learning-paths > h2 {
