@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <main class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 col-lg-6 p-4 p-md-5 bg-white rounded shadow-sm" id="containerOfPage">
+                <div class="text-center mb-4">
+                    <h1 class="fw-bold">ToDo List</h1>
+                    <p class="text-secondary">Add tasks and click on them to mark as done</p>
+                </div>
+                <form class="mb-4" id="form">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="What needs to be done?"
+                            aria-label="Item to do" aria-describedby="add-button" id="inputField">
+                        <button class="btn btn-success px-4" type="submit" id="add-button">ADD</button>
+                    </div>
+                </form>
+
+                <div class="list-group" id="listGroup"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
